@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>隨機新年賀卡</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f9f9f9;
+            padding: 20px;
+        }
+        img {
+            max-width: 80%;
+            height: auto;
+            border: 2px solid #ccc;
+            margin-top: 20px;
+        }
+        button {
+            background-color: #ff6f61;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #ff3b2f;
+        }
+    </style>
+</head>
+<body>
+    <h1>隨機新年賀卡</h1>
+    <button onclick="showRandomImage()">隨機顯示賀卡</button>
+    <div>
+        <img id="randomImage" src="" alt="你的新年賀卡將出現在這裡！">
+    </div>
+    <script>
+        // 賀卡圖片連結
+        const imageLinks = [
+            "https://drive.google.com/file/d/13g4Vu8AYkGXe3RfSt61Uif3E6uRHae3N/view?usp=drive_link",
+            "https://drive.google.com/file/d/1sN7Lg-x4d5puYLSXbg-1KFj7tMznGxtZ/view?usp=drive_link",
+            "https://drive.google.com/file/d/1vDJNmhi6qwd7SRCoRysdJutW3riitbnd/view?usp=drive_link",
+            "https://drive.google.com/file/d/1ZhxnE72p14tadFW7NxFQUHcKCCmxLFXH/view?usp=drive_link",
+            "https://drive.google.com/file/d/1lpcmbg_ti0aF4AkioXx7enDeLuYL1A8J/view?usp=drive_link",
+            "https://drive.google.com/file/d/1omX5ieV7Su9JqTikdIIMsJiFj9AMqx-G/view?usp=drive_link"
+        ];
+
+        // 隨機顯示圖片
+        function showRandomImage() {
+            const randomIndex = Math.floor(Math.random() * imageLinks.length);
+            document.getElementById('randomImage').src = imageLinks[randomIndex];
+        }
+    </script>
+</body>
+</html>
